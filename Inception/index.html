@@ -14,13 +14,30 @@
     <div id="root">
 
         <!-- It will be replaced due to render -->
-        I have written here 
+        <h1>React will replace me</h1>
 
     </div>
+    
 
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="./App.js" ></script>
+    <!-- 
+    - Now we have installed react from npm in out node modules so we don't need CDN Links here 
+    - These links are not preffered because someday react version may change so it is perfered to install the react through npm
+    - All fecthing these from unpkg.com may occur expensive or time consuming 
+    - So it is always better to install these in out node_modules 
+    - Anyone can import React and ReactDOM then and use it in code
+     -->
+
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+    <script type="module" src="./App.js"></script>
+
+
+    <!--
+    - Error: Expected content key de1e4a02ec63c4eb to exist
+    - If the above error comes then delete the .parcel_cache folder
+    -->
+
 
 </body>
 
