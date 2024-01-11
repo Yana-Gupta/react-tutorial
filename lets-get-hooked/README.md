@@ -15,6 +15,9 @@
 # Reconciliation Algorithm ( React Fiber )
 - In React 16 a new algorithm came to update the DOM faster and it was called Reconcialtion Algorithm.
 - After React 16 it was named React Fiber.
+The goal of React Fiber is to increase its suitability for areas like animation, layout, and gestures. Its headline feature is incremental rendering: the ability to split rendering work into chunks and spread it out over multiple frames.
+
+When the state is updated by setState a new tree is generated then it is comparted to the previous tree, then the places where actual changes have happened it is calculated. 
 
 
 # Assignment
@@ -68,7 +71,9 @@ These files have multiple formats : -
     4. INI
 
 3. What are React Hooks?
+
 React Hooks are the inbuilt function in React that react provides. The usecase of these function includes from creating state variables to doing efficient DOM manuipulation.
 
 4. What is useState Hook?
+
 useState hooks is required to create State Varibles. Whenever these state variables are changed they rerender their component. 
