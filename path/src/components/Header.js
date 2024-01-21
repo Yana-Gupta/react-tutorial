@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants"
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const [btnName, setBtnName] = useState("Login")
@@ -23,9 +24,28 @@ const Header = () => {
             </div>
             <div className="nav-items">
                 <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
+
+                    {/* 
+                    * Do not use the anchor tag to send to another page 
+                    * use Link component from react-router-dom to make you app faster
+                    * Region - when using the anchor tag you go to another page the app gets reload 
+                    * Solution - Link component from react-route-dom
+                     */}
+                    <li>
+                        <Link to="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/about">
+                            About Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/contactus"> 
+                        Contact Us
+                        </Link>
+                    </li>
                     <li>Cart</li>
                     <li>
                         <button className="login" onClick={() => {
