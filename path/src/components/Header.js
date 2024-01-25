@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants"
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
     const [btnName, setBtnName] = useState("Login")
+    const online = useOnlineStatus()
 
     // Whenver the state variable is changed it will re-render the whole Header commponent 
     // When ever this set function is called the component is rendered so now this bhtName is a new variable 
@@ -32,6 +34,9 @@ const Header = () => {
                     * Solution - Link component from react-route-dom
                      */}
                     <li>
+                        Online Status: {online ? '🟢' : '🔴'}
+                    </li>
+                    <li>
                         <Link to="/">
                             Home
                         </Link>
@@ -42,8 +47,13 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contactus"> 
-                        Contact Us
+                        <Link to="/contactus">
+                            Contact Us
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/grocery">
+                            Grocery
                         </Link>
                     </li>
                     <li>Cart</li>

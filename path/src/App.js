@@ -7,6 +7,7 @@ import About from "./components/About"
 import Contact from "./components/Contactus"
 import ErrorComponent from "./components/Error"
 import RestaurantMenu from "./components/RestaurantMenu"
+import { lazy, Suspense } from "react"
 // It can also be imported by this but here it will be imported from Body.js cause default as export is used there to test
 // import Footer from "./components/Footer"
 
@@ -14,9 +15,13 @@ import RestaurantMenu from "./components/RestaurantMenu"
 // You need to provide the router to the RouterProvider
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom"
 
+// GO Lazy
+// import Grocery from "./components/Grocery"
+
+const Grocery = lazy(() => import("./components/Grocery"))
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-
 
 
 
@@ -80,11 +85,16 @@ const appRouter = createBrowserRouter([
                 element: <RestaurantMenu />
 
 
-            }
+            },
+          
         ],
         errorElement: <ErrorComponent />
     },
-    
+    {
+        path: "/grocery",
+        element: (<Suspense fallback={<h1> Loading . . .  </h1>}> <Grocery /> </Suspense>)
+    }
+
 ])
 
 

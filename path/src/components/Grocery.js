@@ -1,17 +1,11 @@
 import RestaurantCard from "./RestaurantCard"
 // import { RES_DATA } from "../utils/mockData"
 import { useEffect, useState } from "react";
-import Shimmer from "./Shimmer.js"
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 
-const Body = () => {
 
-    // let listOfRest = RES_DATA;
-
-    // State Variable 
-    // A normal js function 
-    // Utility funtion given by react
+const Grocery = () => {
     const online = useOnlineStatus()
     const [RES_DATA, setRES_DATA] = useState([])
     const [listOfRest, setListOfRest] = useState(RES_DATA)
@@ -26,7 +20,7 @@ const Body = () => {
     }, [RES_DATA])
 
 
-    
+
     if (online === false) return <>You are offline 🐣</>
 
     const fetchData = async () => {
@@ -55,8 +49,7 @@ const Body = () => {
     //         <Shimmer />
     //     </div>
     // )
-
-    return (listOfRest.length === 0) ? <Shimmer /> : (
+    return (listOfRest.length > 0 ) && (
         <div className="body">
             <div className="filter">
                 <div className="search">
@@ -98,9 +91,4 @@ const Body = () => {
     )
 }
 
-
-export default Body
-
-// using * as export 
-
-export { default as Foot } from "./Footer.js"
+export default Grocery
