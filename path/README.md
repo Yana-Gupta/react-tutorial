@@ -125,3 +125,18 @@ How to deal with the error: use Suspense.
 
 - Complexity - Implementing it can be an additional work in the project
 - Loading delays - In smaller application if used, the user can experience a loading delays
+- Compatibility Issues - some things are not 
+- Over Lazy Loading - used more then this may occur
+
+
+##### In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)?
+
+`content` - The content key is used in Just-in-Time (JIT) mode to specify the content that should be scanned for classes. This is relevant when using Tailwind CSS in JIT mode, which dynamically generates the CSS based on your actual usage in your project.
+
+`theme` - The theme key allows you to customize various aspects of Tailwind CSS, such as colors, spacing, fonts, and more. It is a nested object where you can override or extend default values. For example, you can define your own color palette, adjust spacing values, or customize font sizes.
+
+`extend` - The extend key allows you to extend existing utility classes with additional custom utility classes. This is useful when you want to add your own styles or variations to the default set provided by Tailwind.
+
+`plugins` - The plugins key is used to add or configure plugins for Tailwind CSS. Plugins can be used to introduce new features or utilities. For example, you might use a plugin to enable additional variants for a utility, such as hover or focus variants.
+
+
