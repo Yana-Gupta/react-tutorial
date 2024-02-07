@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard"
+import RestaurantCard, { withNewLabel } from "./RestaurantCard"
 // import { RES_DATA } from "../utils/mockData"
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer.js"
@@ -12,10 +12,11 @@ const Body = () => {
     // State Variable 
     // A normal js function 
     // Utility funtion given by react
-    const online = useOnlineStatus()
     const [RES_DATA, setRES_DATA] = useState([])
     const [listOfRest, setListOfRest] = useState(RES_DATA)
     const [searchtext, setSearchtext] = useState("")
+
+    const online = useOnlineStatus()
 
     useEffect(() => {
         fetchData()
@@ -25,8 +26,10 @@ const Body = () => {
         setListOfRest(RES_DATA)
     }, [RES_DATA])
 
+    const NewRestaurantCard = withNewLabel(RestaurantCard)
 
-    
+
+
     if (online === false) return <>You are offline 🐣</>
 
     const fetchData = async () => {
@@ -90,7 +93,7 @@ const Body = () => {
             <div className="res-container">
                 {/* You need to pass a key  */}
                 {listOfRest.length && listOfRest.map(rest => (
-                    <RestaurantCard key={rest.id} info={rest} />
+                    <NewRestaurantCard key={rest.id} info={rest} />
                 ))}
 
             </div>

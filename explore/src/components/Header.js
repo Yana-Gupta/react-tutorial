@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { LOGO_URL } from "../utils/constants"
+import AuthContext from "../context/AuthContext";
 
 const Header = () => {
     const [btnName, setBtnName] = useState("Login")
+
+    const { name } = useContext(AuthContext)
 
     // Whenver the state variable is changed it will re-render the whole Header commponent 
     // When ever this set function is called the component is rendered so now this bhtName is a new variable 
@@ -27,6 +30,7 @@ const Header = () => {
                     <li>About Us</li>
                     <li>Contact Us</li>
                     <li>Cart</li>
+                    <li>{name}</li>
                     <li>
                         <button className="login" onClick={() => {
                             if (btnName === "Login") setBtnName("Logout")
