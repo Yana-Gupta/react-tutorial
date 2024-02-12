@@ -83,8 +83,6 @@ const appRouter = createBrowserRouter([
                 // The dynamic path 
                 path: "/restaurant/:id",
                 element: <RestaurantMenu />
-
-
             },
           
         ],

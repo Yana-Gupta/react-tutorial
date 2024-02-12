@@ -1,9 +1,11 @@
 # Inception of React 
+
 - Lesson one of `Namaste React 🚀`
 - Lesson two of `Namaste React 🚀`
 
 
 # Parcel
+
 - Create Dev Build
 - Creats Local Server
 - HMR = Hot Module Replacement
@@ -21,3 +23,8 @@
 - HTTPS
 - Tree Shaking - remove unused code 
 - Different dev and prod bundles
+
+
+## CDN (Content Delivery Networks) 
+
+A content delivery network (CDN) is a geographically distributed group of servers that caches content close to end users. A CDN allows for the quick transfer of assets needed for loading Internet content, including HTML pages, JavaScript files, stylesheets, images, and videos.
