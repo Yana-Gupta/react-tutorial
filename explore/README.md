@@ -92,28 +92,36 @@ Rendering on the basis of condition is conditional Rendering
 # Assignment - Exploring
 
 1. What is a Microservice?
+
 Making up a huge system with small services. Is used in large application, large developer size teams. 
 
 2. What is Monolith Archtecture?
+
 Everthing is inside one container. Small applications, small teams. 
 
 > If you want to scale up your app one prefer using microservice architecture.
 
 3. What is the difference between Monolith and Microservice?
+
 The main difference is in microservice you break down your applications into smaller independent services, whereas in Monolith architecture the entire application is designed and structured as a single, tightly integrated unit.
 
 4. What is optional Chaining?
+
 (?.) opeartor accessen an object's property or calls a function. If the object accessed or function called using this operator is undefined or null , the expression short circuits and evaluates to undefined instead of throwing an error.
 
 5. What is Shimmer UI?
+
 If data in your application is not loaded then you show some fake UI to the user that is called Shimmer UI.
 
 6. What is the difference between JS expression and JS statement.
+
 The main difference between expressions and statements is that expressions evaluate to a value, while statements do not. This means that expressions can be used wherever a value is expected, such as in an assignment statement or as a function argument. Statements, on the other hand, can only be used where an action is expected, such as in a loop or conditional statement.
 
 7. What is Condition Rendering, explain with a code example.
+
 When you user if else or conditional statements statements to render your UI, it counts in conditional UI. Means, when you apply some sort of conditions to render the UI under any conditional statement, it comes under conditional rendering.
 
 8. What is CORS?
+
 Cross-origin resource sharing (CORS) is a browser mechanism that allows access to resources from a different domain than the one that served the first resource. CORS is a security feature that prevents cross-site scripting (XSS) attacks. 
 CORS works by blocking web pages from making requests to a different domain than the one that served the web page. For example, a web page can embed cross-origin images, stylesheets, scripts, iframes, and videos. 
