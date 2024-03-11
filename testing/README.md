@@ -43,3 +43,16 @@ __ = Dunder Method
 ### usecase of render insider render
 
 When there is some kind of state change. then use render inside act.
+
+
+## Enzyme 
+
+Enzyme is a JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output. It was developed at Airbnb and later transferred to an independent organization.
+
+The main difference between Enzyme Testing Library and React Testing Library is that Enzyme testing library is used for writing the unit test cases, and it is combined with jest. 
+
+Whereas the react testing library the developer can write test cases for the real events. It is built on top of DOM testing library. 
+
+### Reference 
+
+https://www.testim.io/blog/react-testing-library-vs-enzyme/
