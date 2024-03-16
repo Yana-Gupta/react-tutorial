@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-login {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    color: whitesmoke;
+    background-color: black;
+}
+
+.bg-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IN-en-20240311-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    z-index: 0;
+}
