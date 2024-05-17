@@ -1,5 +1,18 @@
+import { useEffect } from "react"
+
 const About = () => {
-    return(
+    useEffect(() => {
+        const i = setInterval(() => {
+            console.log("Hello")
+        }, 1000)
+        return () => {
+            clearInterval(i)
+        }
+
+    }
+
+    )
+    return (
         <div>
             <h1> About </h1>
 

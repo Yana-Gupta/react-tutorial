@@ -38,3 +38,15 @@ Creating a callback function in case some parameter are passed to the `func` the
   Click Me{" "}
 </button>
 ```
+
+### Use TypeScript with react 
+
+1. Download `React` and `TypeScript` package 
+
+2. Make all the files with `tsx/ts` extension 
+
+3. Make a tsconfig.json file for the configuration of typescript 
+
+4. Run `npx typescript` for the compilation of typescript 
+
+5. Run `npm start` commmand

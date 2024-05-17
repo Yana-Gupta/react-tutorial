@@ -83,7 +83,7 @@ Load it when it is required.
 
 #### When and why do we need lazy()?
 
-To reduce the size of the bundler we use lazy, if a part of applicaition is too heavy then we can use lazy loading to make the size of the intial bundle small and if you are provide one main service and another secondary service on your webpage then you can also use lazy there. Lazy loading is a strategy to identify resources as non-blocking (non-critical) and load these only when needed.
+To reduce the size of the bundler we use lazy, if a part of application is too heavy then we can use lazy loading to make the size of the intial bundle small and if you are provide one main service and another secondary service on your webpage then you can also use lazy there. Lazy loading is a strategy to identify resources as non-blocking (non-critical) and load these only when needed.
 
 
 
